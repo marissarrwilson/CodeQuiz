@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <button id="countDown" class="btn"><h3 class="countDown"></h3></br>Time</button>
+    <button id="scoreBoard"class="btn"><h3 class="gameScore"></h3></br>Score</button>
+
+    <div class="container">
+        
+        <!-- Questions -->
+        <div id="question-box" class="hide question1">
+            <div id="question">What is the capital of Turkey?</div>
+            <div id="answer-buttons1" class="btn-grid">
+                <button class="btn btnA">Antalya</button>
+                <button class="btn btnB">Istanbul</button>
+                <button class="btn btnC correct">Ankara</button>
+                <button class="btn btnD">Izmir</button>
+            </div>
+        </div>
+
+        <div id="question-box" class="hide question2">
+            <div id="question">What is the northernmost capital city in the world?</div>
+            <div id="answer-buttons2" class="btn-grid">
+                <button class="btn btnA">Longyearbyen, Norway</button>
+                <button class="btn btnB">Iqaluit, Canada</button>
+                <button class="btn btnC">New York, USA</button>
+                <button class="btn btnD correct">Reyjavik, Iceland</button>
+            </div>
+        </div>
+
+        <div id="question-box" class="hide question3">
+            <div id="question">Algeria gained independence in 1962 from which European country?</div>
+            <div id="answer-buttons3" class="btn-grid">
+                <button class="btn btnA">England</button>
+                <button class="btn btnB correct">France</button>
+                <button class="btn btnC">Portugal</button>
+                <button class="btn btnD">Spain</button>
+            </div>
+        </div>
+
+        <div id="question-box" class="hide question4">
+            <div id="question">What is Cuba's capital?</div>
+            <div id="answer-buttons4" class="btn-grid">
+                <button class="btn btnA correct">Havana</button>
+                <button class="btn btnB">Camaguey</button>
+                <button class="btn btnC">Santiago</button>
+                <button class="btn btnD">Guantanamo</button>
+            </div>
+        </div>
+
+        <div id="question-box" class="hide question5">
+            <div id="question">From which country did the United States purchase Alaska?</div>
+            <div id="answer-buttons5" class="btn-grid">
+                <button class="btn btnA">Canada</button>
+                <button class="btn btnB">Greenland</button>
+                <button class="btn btnC">Norway</button>
+                <button class="btn btnD correct">Russia</button>
+            </div>
+        </div>
+
+        <div class="end hide">
+            <h1>GAME OVER - Enter Name & Score</h1>
+
+            <form>
+                <input placeholder="Name and Score" id="finalScoreName" />
+                <button id="submit">Submit</button>
+                <div>
+                  <h4 id="response"></h4>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="controls">
+            <h1 class="begin">World Quiz</h1> 
+            <button id="start-btn" class="start-btn btn ">START</button>
+        </div>
+
+        <div class="gameOver hide">
+            <h2>High Scores</h2>
+            <ol></ol>
+        </div>
+
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>
